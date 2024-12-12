@@ -2,7 +2,7 @@
 This is the Microsoft Azure Architecture that I would work in, end-to-end as an Azure Data [Analytics] Engineer. In this architecture, data is extracted from the datasource, transformed to clean and make sense of the data, and loaded into a new platform for end-user consumption. This data can either be batched or streamed. All while maintaining data governance, security and SRE in Microsoft Azure.  
 
 
-## The Architecture Overview
+## Overview
 ![Azure-Data-Architecture](https://github.com/user-attachments/assets/beb9266d-419b-4061-aa74-bdb461d46cf9)
 
 https://learn.microsoft.com/en-us/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end 
@@ -32,6 +32,25 @@ On the right is the destination. This is where the data is going to. This is how
 On the bottom is all the services running in the backgorund for security, IAM, DevOps and more!
 
 ![image](https://github.com/user-attachments/assets/4ea17211-b114-47d8-8e50-99668d484ba4)
+
+# Databricks Medallion Architecture 
+This is an architecture for staging data. 
+
+## Overview
+![image](https://github.com/user-attachments/assets/5f9c87f1-65de-4bd9-b2bd-e886a363eada)
+https://www.databricks.com/glossary/medallion-architecture
+
+### Bronze
+When the data comes in from the source it is often raw. This is typically saved as is in what is known as the Bronze stage. This data remains exactly as it is in the source. As an example of raw data in the bronze stage, when working in Azure Entra (fka Azure Active Directory), the fields on the back-end might have a schema with field names similar to "ExtentionAttribute5" and this can be a customizable field added to a user's profile defined by the organization. In reality this might be "sales team" or "sales territory" or anything really. 
+
+### Silver
+As an engineer, I would have to make this makes sense of this data and relay to the end-users what this field actually means. However, I still want to keep a copy with majority of data as it comes in through the datasource to give it just enough structure to be able to analyze the state of the system. This is known as the Silver Stage. This would typically include joining other tables that are relates (SQL joins, dropping duplicated or unwanted records, correcting formatting and innaccurate data).   
+
+
+
+
+
+
 
 
 
