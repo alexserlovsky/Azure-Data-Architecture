@@ -46,12 +46,10 @@ When the data comes in from the source it is often raw. This is typically saved 
 ### Silver
 As an engineer, I would have to make this makes sense of this data and relay to the end-users what this field actually means. However, I still want to keep a copy with majority of data as it comes in through the datasource to give it just enough structure to be able to analyze the state of the system. This is known as the Silver Stage. This would typically include joining other tables that are relates (SQL joins, dropping duplicated or unwanted records, correcting formatting and innaccurate data).   
 
+### Gold
+Gold data refers to data that is cleaned, optimized and ready for production use. This would include business aggregations (such as SUMS, AVERAGES, ratios and more) and requirements that stakeholders have requested. 
 
-
-
-
-
-
-
+## Data Applications
+Once the data is ready to use, it is ready for application use. Developers can use this data for their production applications that use Azure CosmosDB as a NoSQL database. Analysts can also use this data to create data applications, specifically for dashboards and reporting created in for instance Power BI (low-code/no-code data application creation), Streamlit (front-end python applications), RShiny (front-end R applications, using widgets for low-code) or D3 library for JavaScript, just to name a few. Likewise, the data itself canbe the desired project for data teams to ship off by sending containers in the data lake to their clients and or co-workers, using something like Azure Data Share. 
 
 
