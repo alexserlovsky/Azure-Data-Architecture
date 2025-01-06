@@ -53,6 +53,10 @@ As an engineer, I would have to make this makes sense of this data and relay to 
 ### Gold
 Gold data refers to data that is cleaned, optimized and ready for production use. This would include business aggregations (such as SUMS, AVERAGES, ratios and more) and requirements that stakeholders have requested. 
 
+### Example
+![image](https://github.com/user-attachments/assets/91b1a853-c3f9-4e89-9a28-6e81fa1eaacc)
+https://learn.microsoft.com/en-us/azure/databricks/lakehouse/medallion
+
 ## Data Applications
 Once the data is ready to use, it is ready for application use. Developers can use this data for their production applications that use Azure CosmosDB as a NoSQL database. Analysts can also use this data to create data applications, specifically for dashboards and reporting created in for instance Power BI (low-code/no-code data application creation), Streamlit (front-end python applications), RShiny (front-end R applications, using widgets for low-code) or D3 library for JavaScript, just to name a few. Likewise, the data itself canbe the desired project for data teams to ship off by sending containers in the data lake to their clients and or co-workers, using something like Azure Data Share. 
 
